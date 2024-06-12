@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fff" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> $(if refresh-timeout)
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)" /> $(endif)
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)
+    <div class="card3 login">
+        <div class="
+          flex
+          justify-between
+          text-blue-500
+          px-7
+          py-4
+          text-xl
+          mx-auto
+          bg-white
+        ">
+            <a href="$(link-orig)"><span class="fa fa-home"></span></a>
+            <a href="$(link-logout)"><span class="fa fa-sign-out"></span></a>
+        </div>
+
+        <div class="text-center py-14">
+            <p class="text-7xl">
+                <span class="fa fa-check-circle-o text-blue-500"></span>
+            </p>
+            <p class="text-white font-bold">Success! You are now connected.</p>
+            <p class="text-white font-bold">You can now access the internet!</p>
+        </div>
+
+        <p class="uppercase text-sm m-5 py-2 text-white">Your Balances</p>
+        <div class="
+          bg-blue-500
+          rounded-md
+          flex
+          justify-between
+          items-center
+          m-5
+          px-3
+          py-3
+          text-white
+        ">
+            <span class="text-white"><span class="fa fa-envelope px-2"></span>Active Username Code</span>
+            <span class="text-white font-bold">$(username)</span>
+        </div>
+        <div class="
+          bg-white
+          rounded-md
+          flex
+          justify-between
+          items-center
+          m-5
+          px-3
+          py-3
+        ">
+            <span class="text-white"><span class="fa fa-wifi px-2"></span>IKO WIFI Data Balance</span>
+            <span class="text-white font-bold">$(remain-bytes-total-nice)</span>
+        </div>
+
+        <div class="
+          bg-white
+          rounded-md
+          flex
+          justify-between
+          items-center
+          m-5
+          px-3
+          py-3
+        ">
+            <span class="text-white text-sm"><span class="fa fa-mobile px-2"></span>IKO WIFI bytes up/down:</span>
+            <span class="text-white font-bold">$(bytes-in-nice) / $(bytes-out-nice)</span>
+        </div>
+
+        <div class="
+          bg-white
+          rounded-md
+          flex
+          justify-between
+          items-center
+          m-5
+          px-3
+          py-3
+        ">
+            <span class="text-white text-sm"><span class="fa fa-envelope px-2"></span>IKO WIFI connected / left:</span>
+            <span class="text-white font-bold">$(uptime) / $(session-time-left)</span>
+        </div>
+        <div class="w-1/4 mx-auto">
+            <a href="$(link-status)" target="_blank">
+                <button class="btn btn-go text-space ">
+          Continue
+        </button>
+            </a>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="swal.js"></script>
+
+    <script>
+        $(function() {
+            var title;
+            $.getJSON("prices.json", function(data) {
+                $("title, #wifi_name").text(data.title)
+            })
+        })
+    </script>
+
+</body>
+
+</html>

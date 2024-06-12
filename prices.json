@@ -1,0 +1,63 @@
+{
+    "name": "hotspotlogin",
+    "description": "Use this to Update your price and Logos on the customer interface.",
+    "title": "RAYPROTECH WIFI LOGIN",
+    "wifi_name": "RAYPROTECH WIFI",
+    "developers": "Technox Solutions",
+    "server": "",
+    "logo": "ezlogo.png",
+
+    "lnmoapi": "https://rayprotech.wispman.net/index.php?_route=mpesa/post",
+    "lnmoapi2": "https://rayprotech.wispman.net/index.php?_route=mpesa/code",
+    "lnmoapi3": "https://rayprotech.wispman.net/index.php?_route=mpesa/stkquery",
+    "lnmoapi4": "https://rayprotech.wispman.net/system/cron.php",
+    "lnmoapi5": "https://rayprotech.wispman.net/index.php?_route=mpesa/reconnect",
+    "shortcode": "0",
+    "router": "RAYPROTECH_2011",
+    "paybill": 0,
+    "paybill_no": "0",
+    "quota": [{
+            "quota_limit": "2hours",
+            "price": "10",
+            "duration_limit": "2 hours",
+            "speeds": "MAX 3mbps",
+            "color": "blue"
+        },
+        {
+            "quota_limit": "4hours",
+            "price": "20",
+            "duration_limit": "4 hours",
+            "speeds": "MAX 3mbps",
+            "color": "yellow"
+        },
+        {
+            "quota_limit": "12hours",
+            "price": "25",
+            "duration_limit": "12 hours",
+            "speeds": "MAX 3mbps",
+            "color": "green"
+        }
+    ],
+    "duration": [{
+            "quota_limit": "24hours",
+            "price": "30",
+            "duration_limit": "24 hours",
+            "speeds": "MAX 3mbps",
+            "color": "pink"
+        },
+        {
+            "quota_limit": "7Days",
+            "price": "200",
+            "duration_limit": "1 week",
+            "speeds": "MAX 3mbps",
+            "color": "purple"
+        },
+        {
+            "quota_limit": "1month",
+            "price": "800",
+            "duration_limit": "1 month",
+            "speeds": "MAX 3mbps",
+            "color": "red"
+        }
+    ]
+}

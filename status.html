@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#fff" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> $(if refresh-timeout)
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)"> $(endif)
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)
+    <div class="card2 login">
+        <div class="
+          flex
+          justify-center
+          text-blue
+          px-7
+          py-4
+          text-xl
+          mx-auto
+          bg-white
+        ">
+            <a href="https://ikowifi.spot"><span class="fa fa-home"></span></a>
+            <a href="http://ikowifi.spot/logout"><span class="fa fa-sign-out"></span></a>
+        </div>
+
+        <div class="text-center py-14">
+            <p class="text-7xl"><span class="fa fa-check-circle-o text-blue-500"></span></p>
+            <p class="text-white font-bold">Success! You are now connected.</p>
+            <p class="text-white font-bold">You can now access the internet!</p>
+        </div>
+
+        <p class="uppercase text-white m-5 py-2 text-gray-400">Your Balances</p>
+        <div class="
+          bg-blue-500
+          rounded-md
+          flex
+          justify-between
+          items-center
+          m-5
+          px-3
+          py-3
+          text-white
+        ">
+            <span class="text-white"><span class="fa fa-envelope px-2"></span>Active Username Code</span>
+            <span class="text-white font-bold">$(username)</span>
+        </div>
+        <div class="
+        bg-blue-500
+        rounded-md
+        flex
+        justify-between
+        items-center
+        m-5
+        px-3
+        py-3
+        text-white
+      ">
+            <span class="text-white"><span class="fa fa-envelope px-2"></span>Bundle will expire in</span>
+            <span class="text-white font-bold">$(session-time-left)</span>
+        </div>
+        <div class="
+          bg-white
+          rounded-md
+          flex
+          justify-between
+          items-center
+          m-5
+          px-3
+          py-3
+        ">
+            <span class="text-white text-sm"><span class="fa fa-wifi px-2"></span> Data Balance</span>
+            <span class="text-white font-bold">$(remain-bytes-total-nice)</span>
+        </div>
+
+
+        <div class="
+          bg-white
+          rounded-md
+          flex
+          justify-between
+          items-center
+          m-5
+          px-3
+          py-3
+        ">
+            <span class="text-white text-sm"><span class="fa fa-mobile px-2"></span> bytes up/down:</span>
+            <span class="text-white font-bold">$(bytes-in-nice) / $(bytes-out-nice)</span>
+        </div>
+
+        <div class="
+          bg-white
+          rounded-md
+          flex
+          justify-between
+          items-center
+          m-5
+          px-3
+          py-3
+        ">
+            <span class="text-white text-sm"><span class="fa fa-envelope px-2"></span> connected / left:</span>
+            <span class="text-white font-bold">$(uptime) / $(session-time-left)</span>
+        </div>
+    </div>
+
+    <!-- <p class="uppercase text-sm m-5 py-2">Your last 5 Codes</p> -->
+
+    <!-- <p class="bg-green-500 text-white m-5 px-2 py-2 rounded-md">To get your last 5 Access Codes, send wifi 2547xx to 0716437799 via WhatsApp. Where 2547xx is your phone number.</p> -->
+
+</body>
+
+</html>
