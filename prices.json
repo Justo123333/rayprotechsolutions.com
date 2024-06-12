@@ -3,8 +3,8 @@
     "description": "Use this to Update your price and Logos on the customer interface.",
     "title": "RAYPROTECH WIFI LOGIN",
     "wifi_name": "RAYPROTECH WIFI",
-    "developers": "Technox Solutions",
-    "server": "",
+    "developers": "RAYPROTECH",
+    "server": "LOCALHOST",
     "logo": "ezlogo.png",
 
     "lnmoapi": "https://rayprotech.wispman.net/index.php?_route=mpesa/post",
